@@ -1,0 +1,63 @@
+{
+  "name": "WhatWeEat",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "androidProd": "react-native run-android --variant=release",
+    "ios": "react-native run-ios",
+    "iosTablet": "npm run ios -- --simulator \"iPad Air (3rd generation)\"",
+    "iosProd": "react-native run-ios --configuration=release",
+    "android-rev": "adb -s 12011FDD4002L7 reverse tcp:8081 tcp:8081",
+    "debug-mode-android": "adb shell input keyevent 82",
+    "bundleAndroid": "react-native bundle --platform='android' --dev=false  --entry-file='./index.js' --bundle-output='./android/app/src/main/assets/index.android.bundle' --assets-dest='./android/app/src/main/res/' --reset-cache",
+    "bundleIOS": "react-native bundle --platform='ios' --dev=false --entry-file='./index.js' --bundle-output='./ios/main.jsbundle' --assets-dest='./ios' --reset-cache",
+    "log-android": "react-native log-android",
+    "log-ios": "react-native log-ios",
+    "web": "expo start --web",
+    "buildWeb": "expo build:web",
+    "link": "react-native link",
+    "unlink": "react-native unlink",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint:all": "eslint 'src/'",
+    "lint-watch": "esw src/ --color --watch --clear",
+    "jetify": "jetify"
+  },
+  "dependencies": {
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "@react-native-community/async-storage": "^1.8.1",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.5.1",
+    "@react-navigation/stack": "^5.1.1",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.7.1",
+    "react-native-responsive-screen": "^1.4.1",
+    "react-native-safe-area-context": "^0.6.4",
+    "react-native-screens": "^2.2.0",
+    "react-native-svg": "^12.1.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/runtime": "^7.14.6",
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@types/react": "^17.0.11",
+    "@types/react-native": "^0.64.10",
+    "@types/jest": "^26.0.0",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-test-renderer": "^16.9.2",
+    "babel-jest": "^27.0.5",
+    "eslint": "^7.29.0",
+    "jest": "^27.0.5",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "react-test-renderer": "17.0.1",
+    "typescript": "^3.9.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
